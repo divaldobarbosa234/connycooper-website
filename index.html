@@ -3,192 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Conny Cooper — Your treatment companion</title>
+  <title>Conny Cooper — A friendly treatment companion</title>
   <meta
     name="description"
-    content="Conny Cooper helps you organise your treatment, remember your medication and stay on track."
+    content="Conny Cooper is a friendly companion for organising medications, schedules, reminders and treatment information."
   >
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f7f8f4;
-      color: #1f2933;
-    }
-
-    .container {
-      width: min(1100px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    header {
-      padding: 24px 0;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: #1f2933;
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a,
-    footer a {
-      color: #4c5964;
-      text-decoration: none;
-    }
-
-    .nav-links a:hover,
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      padding: 70px 0 100px;
-    }
-
-    .hero-content {
-      max-width: 720px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 18px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #62715f;
-    }
-
-    h1 {
-      margin: 0 0 24px;
-      font-size: clamp(3rem, 8vw, 6.5rem);
-      line-height: 0.95;
-      letter-spacing: -0.055em;
-    }
-
-    .hero p {
-      max-width: 620px;
-      margin: 0;
-      font-size: clamp(1.1rem, 2vw, 1.35rem);
-      line-height: 1.65;
-      color: #56616b;
-    }
-
-    .status {
-      margin-top: 36px;
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 999px;
-      background: #e8eee4;
-      font-weight: 700;
-      color: #44543f;
-    }
-
-    footer {
-      border-top: 1px solid #dde1da;
-      padding: 28px 0 40px;
-      font-size: 0.92rem;
-      color: #69737c;
-    }
-
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 650px) {
-      .nav-links {
-        gap: 14px;
-        font-size: 0.9rem;
-      }
-
-      .hero {
-        padding-top: 50px;
-      }
-    }
-  </style>
+  <link rel="canonical" href="https://connycooper.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Conny Cooper">
+  <meta property="og:title" content="Conny Cooper — A friendly treatment companion">
+  <meta
+    property="og:description"
+    content="A friendly companion for keeping your treatment organised."
+  >
+  <meta property="og:url" content="https://connycooper.com/">
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header>
+  <header class="site-header">
     <div class="container">
-      <nav>
-        <a class="brand" href="/">Conny Cooper</a>
-
-        <div class="nav-links">
-          <a href="/support/">Support</a>
-          <a href="/privacy/">Privacy</a>
-          <a href="/terms/">Terms</a>
-        </div>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-current="page">Conny Cooper</a>
+        <ul class="nav-links">
+          <li><a href="#how-it-helps">How it helps</a></li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <main class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <span class="eyebrow">Meet Conny Cooper</span>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Meet Conny Cooper</span>
+          <h1 id="hero-title">
+            A friendly companion for keeping your treatment organised.
+          </h1>
+          <p class="hero-lead">
+            Bring medications, schedules, reminders and treatment information
+            together in one approachable place.
+          </p>
+          <div class="status">Coming soon to the App Store</div>
+        </div>
 
-        <h1>Your treatment companion.</h1>
-
-        <p>
-          A simpler, friendlier way to organise your treatment,
-          remember your medication and keep moving forward.
-        </p>
-
-        <div class="status">
-          Coming soon to the App Store
+        <div class="character-stage" aria-hidden="true">
+          <span class="character-stage__label">Meet Conny</span>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="section section--surface" id="how-it-helps" aria-labelledby="helps-title">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">How it helps</span>
+          <h2 id="helps-title">The practical things, kept together.</h2>
+          <p>
+            Conny Cooper is designed to make everyday treatment organisation
+            easier to understand and revisit.
+          </p>
+        </div>
+
+        <ul class="feature-grid">
+          <li class="feature-card">
+            <h3>Keep information together</h3>
+            <p>Organise medication and treatment details in one place.</p>
+          </li>
+          <li class="feature-card">
+            <h3>See what is coming up</h3>
+            <p>View upcoming medication schedules and planned activities.</p>
+          </li>
+          <li class="feature-card">
+            <h3>Receive your reminders</h3>
+            <p>Use reminders configured around your treatment schedule.</p>
+          </li>
+          <li class="feature-card">
+            <h3>Record medication activity</h3>
+            <p>Keep a simple record of medication activity over time.</p>
+          </li>
+          <li class="feature-card">
+            <h3>Review treatment information</h3>
+            <p>Look back at the information and activity you have recorded.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="human-title">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">A more human experience</span>
+          <h2 id="human-title">Treatment organisation does not have to feel cold.</h2>
+        </div>
+        <div class="warm-panel">
+          <p>
+            Conny is being designed as a warm, approachable presence around
+            practical treatment tasks—clear enough to be useful, and friendly
+            enough to feel at home in everyday life.
+          </p>
+          <p>
+            Approved character artwork and product imagery will join Conny here
+            as the app gets closer to release.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface" aria-labelledby="safety-title">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">Trust and safety</span>
+          <h2 id="safety-title">Support for organising—not medical advice.</h2>
+        </div>
+        <div class="notice notice--important">
+          <p>
+            Conny Cooper helps users organise treatment information. It does
+            not provide medical advice and does not replace a doctor,
+            pharmacist or other qualified healthcare professional.
+          </p>
+          <p>
+            For medical emergencies, contact your local emergency services.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container footer-content">
-      <span>© 2026 Conny Cooper</span>
-
-      <div class="footer-links">
-        <a href="/support/">Support</a>
-        <a href="/privacy/">Privacy</a>
-        <a href="/terms/">Terms</a>
-        <a href="mailto:support@connycooper.com">Contact</a>
+      <div class="footer-meta">
+        <div class="footer-brand">Conny Cooper</div>
+        <p>© 2026 Conny Cooper</p>
       </div>
+      <ul class="footer-links">
+        <li><a href="/support/">Support</a></li>
+        <li><a href="/privacy/">Privacy</a></li>
+        <li><a href="/terms/">Terms</a></li>
+        <li><a href="/legal/">Legal Notice</a></li>
+        <li><a href="mailto:support@connycooper.com">support@connycooper.com</a></li>
+      </ul>
     </div>
   </footer>
-
 </body>
 </html>
