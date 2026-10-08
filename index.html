@@ -55,7 +55,7 @@
     </div>
   </header>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
     <section class="home-hero" id="about" aria-labelledby="hero-title">
       <div class="container home-hero__grid">
         <div class="home-hero__copy">
@@ -65,35 +65,43 @@
             Keep your medicines, reminders and progress together —
             with a friendly companion along the way.
           </p>
-          <p class="cta cta--hero" role="status" data-reveal data-reveal-delay="240">Coming soon on the App Store</p>
+          <p class="store-badge" role="status" data-reveal data-reveal-delay="240">
+            <picture>
+              <source type="image/webp" srcset="/assets/ui/coming-soon-app-store.webp">
+              <img
+                src="/assets/ui/coming-soon-app-store.png"
+                width="480"
+                height="146"
+                alt="Coming soon on the App Store"
+              >
+            </picture>
+          </p>
           <ul class="home-hero__points" data-reveal data-reveal-delay="320">
-            <li>Organise your treatment</li>
-            <li>Stay on track every day</li>
-            <li>Celebrate your progress</li>
+            <li>
+              <img src="/assets/icons/icon-check.webp" width="183" height="184" alt="" aria-hidden="true">
+              Organise your treatment
+            </li>
+            <li>
+              <img src="/assets/icons/icon-check.webp" width="183" height="184" alt="" aria-hidden="true">
+              Stay on track every day
+            </li>
+            <li>
+              <img src="/assets/icons/icon-check.webp" width="183" height="184" alt="" aria-hidden="true">
+              Celebrate your progress
+            </li>
           </ul>
         </div>
 
         <div class="home-hero__art" data-reveal="image" data-reveal-delay="120">
           <picture>
-            <source type="image/webp" srcset="/assets/character/cooper_thumbs_up.webp">
+            <source type="image/webp" srcset="/assets/character/cooper_hero_wave.webp">
             <img
-              src="/assets/character/cooper_thumbs_up.png"
-              width="368"
-              height="410"
-              alt="Dr. Cooper, a yellow chick in a white coat, glasses and stethoscope, giving a thumbs up."
+              src="/assets/character/cooper_hero_wave.png"
+              width="960"
+              height="884"
+              alt="Dr. Cooper, a yellow chick in a white coat, glasses and stethoscope, waving beside reminder icons."
+              fetchpriority="high"
             >
-          </picture>
-          <picture class="float-med float-med--pink">
-            <source type="image/webp" srcset="/assets/medicines/medicine_pink_tablet.webp">
-            <img src="/assets/medicines/medicine_pink_tablet.png" width="284" height="276" alt="" aria-hidden="true">
-          </picture>
-          <picture class="float-med float-med--blue">
-            <source type="image/webp" srcset="/assets/medicines/medicine_blue_capsule.webp">
-            <img src="/assets/medicines/medicine_blue_capsule.png" width="363" height="276" alt="" aria-hidden="true">
-          </picture>
-          <picture class="float-med float-med--yellow">
-            <source type="image/webp" srcset="/assets/medicines/medicine_yellow_tablet.webp">
-            <img src="/assets/medicines/medicine_yellow_tablet.png" width="324" height="262" alt="" aria-hidden="true">
           </picture>
         </div>
       </div>
@@ -111,55 +119,51 @@
           <li class="home-step" data-reveal data-reveal-delay="0">
             <div class="home-step__art">
               <picture>
-                <source type="image/webp" srcset="/assets/character/cooper_attention_reminder.webp">
+                <source type="image/webp" srcset="/assets/character/cooper_step_add.webp">
                 <img
-                  src="/assets/character/cooper_attention_reminder.png"
-                  width="394"
-                  height="379"
+                  src="/assets/character/cooper_step_add.png"
+                  width="443"
+                  height="334"
                   alt=""
                   aria-hidden="true"
                 >
               </picture>
-              <picture class="home-step__med">
-                <source type="image/webp" srcset="/assets/medicines/medicine_blue_capsule_tablet.webp">
-                <img src="/assets/medicines/medicine_blue_capsule_tablet.png" width="324" height="263" alt="" aria-hidden="true">
-              </picture>
             </div>
-            <p class="home-step__number">01</p>
+            <p class="home-step__number">1</p>
             <h3>Add your treatment</h3>
             <p>Take a photo, import a prescription or add your medicine manually.</p>
           </li>
           <li class="home-step" data-reveal data-reveal-delay="100">
             <div class="home-step__art">
               <picture>
-                <source type="image/webp" srcset="/assets/character/cooper_wink_thumbs_up.webp">
+                <source type="image/webp" srcset="/assets/character/cooper_step_track.webp">
                 <img
-                  src="/assets/character/cooper_wink_thumbs_up.png"
-                  width="384"
-                  height="399"
+                  src="/assets/character/cooper_step_track.png"
+                  width="442"
+                  height="334"
                   alt=""
                   aria-hidden="true"
                 >
               </picture>
             </div>
-            <p class="home-step__number">02</p>
+            <p class="home-step__number">2</p>
             <h3>Stay on track</h3>
             <p>See what you need to take and receive reminders when you need them.</p>
           </li>
           <li class="home-step" data-reveal data-reveal-delay="200">
             <div class="home-step__art">
               <picture>
-                <source type="image/webp" srcset="/assets/character/cooper_heart_positive.webp">
+                <source type="image/webp" srcset="/assets/character/cooper_step_grow.webp">
                 <img
-                  src="/assets/character/cooper_heart_positive.png"
-                  width="394"
-                  height="382"
+                  src="/assets/character/cooper_step_grow.png"
+                  width="466"
+                  height="348"
                   alt=""
                   aria-hidden="true"
                 >
               </picture>
             </div>
-            <p class="home-step__number">03</p>
+            <p class="home-step__number">3</p>
             <h3>Watch your progress grow</h3>
             <p>Follow your routine, build consistency and celebrate meaningful milestones.</p>
           </li>
@@ -171,41 +175,39 @@
       <div class="container home-app__grid">
         <header class="home-section__intro" data-reveal="left">
           <p class="eyebrow">Your treatment</p>
-          <h2 id="app-title">Your progress in one place.</h2>
+          <h2 id="app-title">Your treatment. Your progress.</h2>
           <p>
-            A clear overview of what to take, when to take it and how you’re doing —
-            all in a simple and friendly experience.
+            See today’s doses, your next reminder and how your routine is growing —
+            in the real Conny Cooper app.
           </p>
-          <ul class="example-pills" aria-label="Example progress highlights">
-            <li>
-              <span class="example-pills__label">Today</span>
-              <strong>4 of 4 complete</strong>
-            </li>
-            <li>
-              <span class="example-pills__label">Streak</span>
-              <strong>7 day streak</strong>
-            </li>
-            <li>
-              <span class="example-pills__label">Next dose</span>
-              <strong>18:00</strong>
-            </li>
-            <li>
-              <span class="example-pills__label">Milestone</span>
-              <strong>Badge unlocked</strong>
-            </li>
-          </ul>
-          <p class="example-note">Sample values for illustration only.</p>
         </header>
 
-        <figure class="phone-slot" data-reveal="right">
-          <div class="phone-slot__screen">
-            <p>Approved app screenshot</p>
-            <p class="phone-slot__note">
-              A production Conny Cooper screenshot will sit here.
-              Older previews that still use historical naming are not shown.
-            </p>
-          </div>
-        </figure>
+        <div class="phone-stage">
+          <figure class="phone-frame phone-frame--primary" data-reveal="right">
+            <picture>
+              <source type="image/webp" srcset="/assets/screenshots/conny-cooper-home.webp">
+              <img
+                src="/assets/screenshots/conny-cooper-home.png"
+                width="473"
+                height="1024"
+                alt="Conny Cooper Home screen with today’s treatment progress, next scheduled dose and Dr. Cooper."
+              >
+            </picture>
+            <figcaption>Home</figcaption>
+          </figure>
+          <figure class="phone-frame phone-frame--secondary" data-reveal="image" data-reveal-delay="140">
+            <picture>
+              <source type="image/webp" srcset="/assets/screenshots/conny-cooper-progress.webp">
+              <img
+                src="/assets/screenshots/conny-cooper-progress.png"
+                width="473"
+                height="1024"
+                alt="Conny Cooper Progress screen with XP, weekly activity, badges and a journey timeline."
+              >
+            </picture>
+            <figcaption>Progress</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -300,12 +302,14 @@
 
         <ul class="trust-grid" data-reveal data-reveal-delay="90">
           <li>
+            <img src="/assets/icons/icon-shield.webp" width="156" height="155" alt="" aria-hidden="true">
             <h3>Helps you organise your treatment</h3>
             <p>
               Keep your medicines, reminders and progress in one place.
             </p>
           </li>
           <li>
+            <img src="/assets/icons/icon-lock.webp" width="156" height="155" alt="" aria-hidden="true">
             <h3>Private by design</h3>
             <p>
               The current release does not include advertising, cross-app
@@ -314,6 +318,7 @@
             </p>
           </li>
           <li>
+            <img src="/assets/icons/icon-heart.webp" width="156" height="157" alt="" aria-hidden="true">
             <h3>Not medical advice</h3>
             <p>
               Conny Cooper does not replace your doctor, pharmacist or
@@ -328,21 +333,31 @@
       <div class="container home-final__grid">
         <div class="home-final__art" data-reveal="image">
           <picture>
-            <source type="image/webp" srcset="/assets/character/cooper_heart_positive.webp">
+            <source type="image/webp" srcset="/assets/character/cooper_explorer.webp">
             <img
-              src="/assets/character/cooper_heart_positive.png"
-              width="394"
-              height="382"
-              alt="Dr. Cooper holding a heart."
+              src="/assets/character/cooper_explorer.png"
+              width="931"
+              height="883"
+              alt="Dr. Cooper waving while walking with a backpack and a red flag."
               loading="lazy"
               decoding="async"
             >
           </picture>
         </div>
-        <div data-reveal>
+        <div class="home-final__copy" data-reveal>
           <h2 id="final-title">Your next step starts here.</h2>
           <p>Make treatment feel a little easier.</p>
-          <p class="cta cta--hero" role="status">Coming soon on the App Store</p>
+          <p class="store-badge" role="status">
+            <picture>
+              <source type="image/webp" srcset="/assets/ui/coming-soon-app-store.webp">
+              <img
+                src="/assets/ui/coming-soon-app-store.png"
+                width="480"
+                height="146"
+                alt="Coming soon on the App Store"
+              >
+            </picture>
+          </p>
         </div>
       </div>
     </section>
