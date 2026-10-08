@@ -18,79 +18,85 @@
   >
   <meta property="og:url" content="https://connycooper.com/support/">
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/product.css">
+  <script src="/assets/js/motion.js" defer></script>
 </head>
 
-<body>
+<body class="product">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="container">
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a class="brand" href="/">Conny Cooper</a>
-        <ul class="nav-links">
+  <header class="product-header">
+    <div class="container product-header__bar">
+      <a class="brand" href="/">Conny Cooper</a>
+
+      <nav class="product-nav product-nav--desktop" aria-label="Primary navigation">
+        <ul class="product-nav__links">
           <li><a href="/#how-it-works">How it works</a></li>
           <li><a href="/#progress">Progress</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/support/" aria-current="page">Support</a></li>
         </ul>
       </nav>
+
+      <details class="product-menu">
+        <summary aria-label="Open menu">Menu</summary>
+        <nav aria-label="Primary navigation">
+          <ul class="product-nav__links">
+            <li><a href="/#how-it-works">How it works</a></li>
+            <li><a href="/#progress">Progress</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/support/" aria-current="page">Support</a></li>
+          </ul>
+        </nav>
+      </details>
+
+      <a class="cta cta--header" href="mailto:support@connycooper.com">Email support</a>
     </div>
   </header>
 
   <main id="main-content">
-    <header class="page-hero">
-      <div class="container">
-        <span class="eyebrow">We are here to help</span>
-        <h1>Conny Cooper Support</h1>
-        <p>
-          Find help below or email
-          <a href="mailto:support@connycooper.com">support@connycooper.com</a>.
-        </p>
-      </div>
-    </header>
-
-    <section class="section section--surface" aria-labelledby="contact-title">
-      <div class="container split">
-        <div>
-          <span class="eyebrow">Contact</span>
-          <h2 id="contact-title">Tell us what you need help with.</h2>
+    <section class="support-hero" aria-labelledby="support-title">
+      <div class="container support-hero__grid">
+        <div data-reveal>
+          <p class="eyebrow">Here to help</p>
+          <h1 id="support-title">How can we help?</h1>
+          <p>
+            Find answers, manage your account, or get in touch with the Conny Cooper team.
+          </p>
+          <a class="cta" href="mailto:support@connycooper.com">Email support</a>
         </div>
-        <div class="warm-panel">
-          <h3>Email support</h3>
-          <p>
-            Write to
-            <a href="mailto:support@connycooper.com">support@connycooper.com</a>
-            and include the sign-in method or feature involved, what you
-            expected, and what happened.
-          </p>
-          <p>
-            Do not include passwords, payment-card information, or prescription
-            images unless support specifically asks for information through an
-            appropriate channel.
-          </p>
+        <div class="support-hero__art" data-reveal="image" data-reveal-delay="90">
+          <picture>
+            <source type="image/webp" srcset="/assets/character/cooper_wink_thumbs_up.webp">
+            <img
+              src="/assets/character/cooper_wink_thumbs_up.png"
+              width="384"
+              height="399"
+              alt="Dr. Cooper, a yellow chick in a white coat, glasses and stethoscope, winking and giving a thumbs up."
+            >
+          </picture>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="help-title">
+    <section class="support-section" aria-labelledby="help-title">
       <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Common topics</span>
-          <h2 id="help-title">Quick help</h2>
-        </div>
+        <header class="support-section__intro" data-reveal>
+          <p class="eyebrow">Help topics</p>
+          <h2 id="help-title">Quick answers for everyday questions.</h2>
+        </header>
 
-        <div class="help-grid">
-          <article class="help-card">
-            <h3>Sign in</h3>
+        <ul class="support-topics">
+          <li class="support-topic" data-reveal data-reveal-delay="0">
+            <h3>Signing in</h3>
             <p>
               Conny Cooper supports Sign in with Apple, Google Sign-In, and
               email with password. Use the same method you used when creating
               the account. If access still fails, contact support and identify
               the method—never send your password.
             </p>
-          </article>
-
-          <article class="help-card">
+          </li>
+          <li class="support-topic" data-reveal data-reveal-delay="90">
             <h3>Prescriptions and scanning</h3>
             <p>
               Camera images, photos and PDFs use on-device Apple text
@@ -98,65 +104,65 @@
               against the original prescription before confirming. Manual
               entry does not use OCR.
             </p>
-          </article>
-
-          <article class="help-card">
-            <h3>Reminders</h3>
+          </li>
+          <li class="support-topic" data-reveal data-reveal-delay="180">
+            <h3>Medication reminders</h3>
             <p>
               Check the medication schedule in Conny Cooper and confirm that
               notifications are allowed in iOS settings. Reminders support
               organisation but do not replace professional instructions or
               your own checks.
             </p>
-          </article>
-
-          <article class="help-card">
+          </li>
+          <li class="support-topic" data-reveal data-reveal-delay="0">
             <h3>Conny Cooper Super</h3>
             <p>
               Super purchases, renewals, trials or promotions, and billing are
               managed through Apple. Current offer details are shown before
               purchase in the App Store purchase flow.
             </p>
-          </article>
-
-          <article class="help-card">
-            <h3>Restore Purchases</h3>
+          </li>
+          <li class="support-topic" data-reveal data-reveal-delay="90">
+            <h3>Purchases and subscriptions</h3>
             <p>
               Use <strong>Restore Purchases</strong> in the app while signed in
               to the Apple account used for the purchase. Subscription
               management and cancellation are available through your Apple
               account settings.
             </p>
-          </article>
-
-          <article class="help-card">
-            <h3>Privacy requests</h3>
+          </li>
+          <li class="support-topic" data-reveal data-reveal-delay="180">
+            <h3>Privacy and account data</h3>
             <p>
               To ask about access, correction, deletion or another applicable
               privacy right, email
               <a href="mailto:support@connycooper.com">support@connycooper.com</a>.
               We may need to verify your identity before completing a request.
             </p>
-          </article>
-        </div>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="section section--surface" aria-labelledby="account-title">
-      <div class="container split">
-        <div>
-          <span class="eyebrow">Your account</span>
-          <h2 id="account-title">Sign Out and Delete Account are different.</h2>
-        </div>
-        <div>
-          <h3>Sign Out</h3>
+    <section class="support-section support-account" aria-labelledby="account-title">
+      <div class="container">
+        <header class="support-section__intro" data-reveal>
+          <p class="eyebrow">Account management</p>
+          <h2 id="account-title">Your account, your control.</h2>
+          <p>Sign Out and Delete Account are different actions with different results.</p>
+        </header>
+
+        <details data-reveal>
+          <summary>Sign Out</summary>
           <p>
             Signing out ends the current session. It does not delete your
             account or the account-linked information held for the service.
           </p>
+        </details>
 
-          <h3>Permanent account deletion</h3>
-          <p>In the app:</p>
+        <details data-reveal data-reveal-delay="80">
+          <summary>Delete Account</summary>
+          <p>Permanent account deletion. In the app:</p>
           <ol>
             <li>Open <strong>Profile</strong>.</li>
             <li>Choose <strong>Delete account &amp; data</strong>.</li>
@@ -175,13 +181,32 @@
             <a href="mailto:support@connycooper.com">support@connycooper.com</a>
             if you need assistance.
           </p>
-        </div>
+        </details>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="emergency-title">
+    <section class="support-section support-contact" aria-labelledby="contact-title">
+      <div class="container" data-reveal>
+        <p class="eyebrow">Contact support</p>
+        <h2 id="contact-title">Tell us what you need help with.</h2>
+        <p class="support-note">
+          Write to
+          <a href="mailto:support@connycooper.com">support@connycooper.com</a>
+          and include the sign-in method or feature involved, what you
+          expected, and what happened.
+        </p>
+        <p class="support-note">
+          Do not include passwords, payment-card information, or prescription
+          images unless support specifically asks for information through an
+          appropriate channel.
+        </p>
+        <a class="cta" href="mailto:support@connycooper.com">Email support@connycooper.com</a>
+      </div>
+    </section>
+
+    <section class="support-section" aria-labelledby="emergency-title">
       <div class="container">
-        <div class="notice notice--important narrow">
+        <div class="support-safety" data-reveal>
           <h2 id="emergency-title">Medical and emergency help</h2>
           <p>
             Conny Cooper and Cooper are not a doctor, pharmacist, diagnostic
@@ -198,10 +223,11 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer product-footer">
     <div class="container footer-content">
       <div class="footer-meta">
         <div class="footer-brand">Conny Cooper</div>
+        <p>A friendly companion for your treatment routine.</p>
         <p>© 2026 Conny Cooper</p>
       </div>
       <ul class="footer-links">
@@ -209,7 +235,6 @@
         <li><a href="/privacy/">Privacy</a></li>
         <li><a href="/terms/">Terms</a></li>
         <li><a href="/legal/">Legal Notice</a></li>
-        <li><a href="mailto:support@connycooper.com">support@connycooper.com</a></li>
       </ul>
     </div>
   </footer>

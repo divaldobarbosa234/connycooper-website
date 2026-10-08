@@ -18,24 +18,38 @@
   >
   <meta property="og:url" content="https://connycooper.com/">
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/product.css">
   <link rel="stylesheet" href="/assets/css/home.css">
+  <script src="/assets/js/motion.js" defer></script>
 </head>
 
-<body class="home">
+<body class="home product">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header class="site-header home-header">
-    <div class="container home-header__inner">
+  <header class="product-header">
+    <div class="container product-header__bar">
       <a class="brand" href="/" aria-current="page">Conny Cooper</a>
 
-      <nav class="home-nav" aria-label="Primary navigation">
-        <ul class="home-nav__links">
+      <nav class="product-nav product-nav--desktop" aria-label="Primary navigation">
+        <ul class="product-nav__links">
           <li><a href="#how-it-works">How it works</a></li>
           <li><a href="#progress">Progress</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="/support/">Support</a></li>
         </ul>
       </nav>
+
+      <details class="product-menu">
+        <summary aria-label="Open menu">Menu</summary>
+        <nav aria-label="Primary navigation">
+          <ul class="product-nav__links">
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#progress">Progress</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="/support/">Support</a></li>
+          </ul>
+        </nav>
+      </details>
 
       <span class="cta cta--header" aria-label="Coming soon to the App Store">Coming soon</span>
     </div>
@@ -45,21 +59,21 @@
     <section class="home-hero" id="about" aria-labelledby="hero-title">
       <div class="container home-hero__grid">
         <div class="home-hero__copy">
-          <h1 id="hero-title">Meet Conny Cooper.</h1>
-          <p class="home-hero__sub">Your treatment, a little easier every day.</p>
-          <p class="home-hero__lead">
+          <h1 id="hero-title" data-reveal>Meet Conny Cooper.</h1>
+          <p class="home-hero__sub" data-reveal data-reveal-delay="90">Your treatment, a little easier every day.</p>
+          <p class="home-hero__lead" data-reveal data-reveal-delay="160">
             Keep your medicines, reminders and progress together —
             with a friendly companion along the way.
           </p>
-          <p class="cta cta--hero" role="status">Coming soon on the App Store</p>
-          <ul class="home-hero__points">
+          <p class="cta cta--hero" role="status" data-reveal data-reveal-delay="240">Coming soon on the App Store</p>
+          <ul class="home-hero__points" data-reveal data-reveal-delay="320">
             <li>Organise your treatment</li>
             <li>Stay on track every day</li>
             <li>Celebrate your progress</li>
           </ul>
         </div>
 
-        <div class="home-hero__art">
+        <div class="home-hero__art" data-reveal="image" data-reveal-delay="120">
           <picture>
             <source type="image/webp" srcset="/assets/character/cooper_thumbs_up.webp">
             <img
@@ -88,13 +102,13 @@
     <section class="home-section home-how" id="how-it-works" aria-labelledby="how-title">
       <span id="how-it-helps" tabindex="-1"></span>
       <div class="container">
-        <header class="home-section__intro home-section__intro--center">
+        <header class="home-section__intro home-section__intro--center" data-reveal>
           <p class="eyebrow">How it works</p>
           <h2 id="how-title">Everything you need. Nothing complicated.</h2>
         </header>
 
         <ol class="home-steps">
-          <li class="home-step">
+          <li class="home-step" data-reveal data-reveal-delay="0">
             <div class="home-step__art">
               <picture>
                 <source type="image/webp" srcset="/assets/character/cooper_attention_reminder.webp">
@@ -115,7 +129,7 @@
             <h3>Add your treatment</h3>
             <p>Take a photo, import a prescription or add your medicine manually.</p>
           </li>
-          <li class="home-step">
+          <li class="home-step" data-reveal data-reveal-delay="100">
             <div class="home-step__art">
               <picture>
                 <source type="image/webp" srcset="/assets/character/cooper_wink_thumbs_up.webp">
@@ -132,7 +146,7 @@
             <h3>Stay on track</h3>
             <p>See what you need to take and receive reminders when you need them.</p>
           </li>
-          <li class="home-step">
+          <li class="home-step" data-reveal data-reveal-delay="200">
             <div class="home-step__art">
               <picture>
                 <source type="image/webp" srcset="/assets/character/cooper_heart_positive.webp">
@@ -155,7 +169,7 @@
 
     <section class="home-section home-app" aria-labelledby="app-title">
       <div class="container home-app__grid">
-        <header class="home-section__intro">
+        <header class="home-section__intro" data-reveal="left">
           <p class="eyebrow">Your treatment</p>
           <h2 id="app-title">Your progress in one place.</h2>
           <p>
@@ -183,7 +197,7 @@
           <p class="example-note">Sample values for illustration only.</p>
         </header>
 
-        <figure class="phone-slot">
+        <figure class="phone-slot" data-reveal="right">
           <div class="phone-slot__screen">
             <p>Approved app screenshot</p>
             <p class="phone-slot__note">
@@ -197,7 +211,7 @@
 
     <section class="home-section home-progress" id="progress" aria-labelledby="progress-title">
       <div class="container">
-        <header class="home-section__intro home-section__intro--center">
+        <header class="home-section__intro home-section__intro--center" data-reveal>
           <p class="eyebrow">Progress &amp; achievements</p>
           <h2 id="progress-title">Small steps deserve to be celebrated.</h2>
           <p>
@@ -207,7 +221,7 @@
         </header>
 
         <ul class="badge-grid">
-          <li>
+          <li data-reveal data-reveal-delay="0">
             <figure>
               <picture>
                 <source type="image/webp" srcset="/assets/badges/achievement_first_dose.webp">
@@ -223,7 +237,7 @@
               <figcaption>First Step</figcaption>
             </figure>
           </li>
-          <li>
+          <li data-reveal data-reveal-delay="90">
             <figure>
               <picture>
                 <source type="image/webp" srcset="/assets/badges/achievement_first_day.webp">
@@ -239,7 +253,7 @@
               <figcaption>Day One Done</figcaption>
             </figure>
           </li>
-          <li>
+          <li data-reveal data-reveal-delay="180">
             <figure>
               <picture>
                 <source type="image/webp" srcset="/assets/badges/achievement_streak_14.webp">
@@ -255,7 +269,7 @@
               <figcaption>14 Days</figcaption>
             </figure>
           </li>
-          <li>
+          <li data-reveal data-reveal-delay="270">
             <figure>
               <picture>
                 <source type="image/webp" srcset="/assets/badges/achievement_first_treatment_complete.webp">
@@ -277,14 +291,14 @@
 
     <section class="home-section home-trust" aria-labelledby="trust-title">
       <div class="container">
-        <header class="home-section__intro home-section__intro--center">
+        <header class="home-section__intro home-section__intro--center" data-reveal>
           <p class="eyebrow">Trust &amp; safety</p>
           <h2 id="trust-title">
             Designed to support your routine — not replace your doctor.
           </h2>
         </header>
 
-        <ul class="trust-grid">
+        <ul class="trust-grid" data-reveal data-reveal-delay="90">
           <li>
             <h3>Helps you organise your treatment</h3>
             <p>
@@ -312,7 +326,7 @@
 
     <section class="home-section home-final" aria-labelledby="final-title">
       <div class="container home-final__grid">
-        <div class="home-final__art">
+        <div class="home-final__art" data-reveal="image">
           <picture>
             <source type="image/webp" srcset="/assets/character/cooper_heart_positive.webp">
             <img
@@ -325,7 +339,7 @@
             >
           </picture>
         </div>
-        <div>
+        <div data-reveal>
           <h2 id="final-title">Your next step starts here.</h2>
           <p>Make treatment feel a little easier.</p>
           <p class="cta cta--hero" role="status">Coming soon on the App Store</p>
@@ -334,7 +348,7 @@
     </section>
   </main>
 
-  <footer class="site-footer home-footer">
+  <footer class="site-footer product-footer">
     <div class="container footer-content">
       <div class="footer-meta">
         <div class="footer-brand">Conny Cooper</div>
