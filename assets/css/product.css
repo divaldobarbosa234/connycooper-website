@@ -390,24 +390,24 @@ html {
   }
 }
 
-@media (max-width: 22.4375rem) {
+@media (max-width: 47.99rem) {
   .product-header .cta.cta--header {
     display: none;
   }
-}
 
-@media (max-width: 47.99rem) {
-  .cta--header {
-    font-size: 0.78rem;
-    padding: 0.4rem 0.7rem;
+  .support-hero {
+    padding: 1.35rem 0 1.6rem;
   }
 
   .support-hero__grid {
     grid-template-columns: 1fr;
+    gap: 0.85rem;
   }
 
   .support-hero h1 {
     max-width: none;
+    margin-bottom: 0.55rem;
+    font-size: clamp(1.9rem, 8vw, 2.5rem);
   }
 
   .support-hero__art {
@@ -415,6 +415,31 @@ html {
   }
 
   .support-hero__art img {
-    width: min(100%, 9.5rem);
+    width: min(100%, 7.25rem);
+  }
+
+  .support-section {
+    padding: 1.7rem 0;
+  }
+
+  .support-section h2 {
+    font-size: clamp(1.45rem, 6vw, 2rem);
+  }
+
+  .support-section__intro {
+    margin-bottom: 1rem;
+  }
+
+  .support-topics {
+    gap: 0.7rem;
+  }
+
+  .support-topic {
+    padding: 0.95rem 1rem;
+  }
+
+  .support-account details {
+    margin-bottom: 0.6rem;
+    padding: 0.2rem 0.9rem 0.85rem;
   }
 }
