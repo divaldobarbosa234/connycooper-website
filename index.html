@@ -18,126 +18,327 @@
   >
   <meta property="og:url" content="https://connycooper.com/">
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
 </head>
 
-<body>
+<body class="home">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="container">
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a class="brand" href="/" aria-current="page">Conny Cooper</a>
-        <ul class="nav-links">
-          <li><a href="#how-it-helps">How it helps</a></li>
+  <header class="site-header home-header">
+    <div class="container home-header__inner">
+      <a class="brand" href="/" aria-current="page">Conny Cooper</a>
+
+      <nav class="home-nav" aria-label="Primary navigation">
+        <ul class="home-nav__links">
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#progress">Progress</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="/support/">Support</a></li>
-          <li><a href="/privacy/">Privacy</a></li>
-          <li><a href="/terms/">Terms</a></li>
         </ul>
       </nav>
+
+      <span class="cta cta--header" aria-label="Coming soon to the App Store">Coming soon</span>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Meet Conny Cooper</span>
-          <h1 id="hero-title">
-            A friendly companion for keeping your treatment organised.
-          </h1>
-          <p class="hero-lead">
-            Bring medications, schedules, reminders and treatment information
-            together in one approachable place.
+    <section class="home-hero" id="about" aria-labelledby="hero-title">
+      <div class="container home-hero__grid">
+        <div class="home-hero__copy">
+          <h1 id="hero-title">Meet Conny Cooper.</h1>
+          <p class="home-hero__sub">Your treatment, a little easier every day.</p>
+          <p class="home-hero__lead">
+            Keep your medicines, reminders and progress together —
+            with a friendly companion along the way.
           </p>
-          <div class="status">Coming soon to the App Store</div>
+          <p class="cta cta--hero" role="status">Coming soon on the App Store</p>
+          <ul class="home-hero__points">
+            <li>Organise your treatment</li>
+            <li>Stay on track every day</li>
+            <li>Celebrate your progress</li>
+          </ul>
         </div>
 
-        <div class="character-stage" aria-hidden="true">
-          <span class="character-stage__label">Meet Conny</span>
+        <div class="home-hero__art">
+          <picture>
+            <source type="image/webp" srcset="/assets/character/cooper_thumbs_up.webp">
+            <img
+              src="/assets/character/cooper_thumbs_up.png"
+              width="368"
+              height="410"
+              alt="Dr. Cooper, a yellow chick in a white coat, glasses and stethoscope, giving a thumbs up."
+            >
+          </picture>
+          <picture class="float-med float-med--pink">
+            <source type="image/webp" srcset="/assets/medicines/medicine_pink_tablet.webp">
+            <img src="/assets/medicines/medicine_pink_tablet.png" width="284" height="276" alt="" aria-hidden="true">
+          </picture>
+          <picture class="float-med float-med--blue">
+            <source type="image/webp" srcset="/assets/medicines/medicine_blue_capsule.webp">
+            <img src="/assets/medicines/medicine_blue_capsule.png" width="363" height="276" alt="" aria-hidden="true">
+          </picture>
+          <picture class="float-med float-med--yellow">
+            <source type="image/webp" srcset="/assets/medicines/medicine_yellow_tablet.webp">
+            <img src="/assets/medicines/medicine_yellow_tablet.png" width="324" height="262" alt="" aria-hidden="true">
+          </picture>
         </div>
       </div>
     </section>
 
-    <section class="section section--surface" id="how-it-helps" aria-labelledby="helps-title">
+    <section class="home-section home-how" id="how-it-works" aria-labelledby="how-title">
+      <span id="how-it-helps" tabindex="-1"></span>
       <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">How it helps</span>
-          <h2 id="helps-title">The practical things, kept together.</h2>
-          <p>
-            Conny Cooper is designed to make everyday treatment organisation
-            easier to understand and revisit.
-          </p>
-        </div>
+        <header class="home-section__intro home-section__intro--center">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">Everything you need. Nothing complicated.</h2>
+        </header>
 
-        <ul class="feature-grid">
-          <li class="feature-card">
-            <h3>Keep information together</h3>
-            <p>Organise medication and treatment details in one place.</p>
+        <ol class="home-steps">
+          <li class="home-step">
+            <div class="home-step__art">
+              <picture>
+                <source type="image/webp" srcset="/assets/character/cooper_attention_reminder.webp">
+                <img
+                  src="/assets/character/cooper_attention_reminder.png"
+                  width="394"
+                  height="379"
+                  alt=""
+                  aria-hidden="true"
+                >
+              </picture>
+              <picture class="home-step__med">
+                <source type="image/webp" srcset="/assets/medicines/medicine_blue_capsule_tablet.webp">
+                <img src="/assets/medicines/medicine_blue_capsule_tablet.png" width="324" height="263" alt="" aria-hidden="true">
+              </picture>
+            </div>
+            <p class="home-step__number">01</p>
+            <h3>Add your treatment</h3>
+            <p>Take a photo, import a prescription or add your medicine manually.</p>
           </li>
-          <li class="feature-card">
-            <h3>See what is coming up</h3>
-            <p>View upcoming medication schedules and planned activities.</p>
+          <li class="home-step">
+            <div class="home-step__art">
+              <picture>
+                <source type="image/webp" srcset="/assets/character/cooper_wink_thumbs_up.webp">
+                <img
+                  src="/assets/character/cooper_wink_thumbs_up.png"
+                  width="384"
+                  height="399"
+                  alt=""
+                  aria-hidden="true"
+                >
+              </picture>
+            </div>
+            <p class="home-step__number">02</p>
+            <h3>Stay on track</h3>
+            <p>See what you need to take and receive reminders when you need them.</p>
           </li>
-          <li class="feature-card">
-            <h3>Receive your reminders</h3>
-            <p>Use reminders configured around your treatment schedule.</p>
+          <li class="home-step">
+            <div class="home-step__art">
+              <picture>
+                <source type="image/webp" srcset="/assets/character/cooper_heart_positive.webp">
+                <img
+                  src="/assets/character/cooper_heart_positive.png"
+                  width="394"
+                  height="382"
+                  alt=""
+                  aria-hidden="true"
+                >
+              </picture>
+            </div>
+            <p class="home-step__number">03</p>
+            <h3>Watch your progress grow</h3>
+            <p>Follow your routine, build consistency and celebrate meaningful milestones.</p>
           </li>
-          <li class="feature-card">
-            <h3>Record medication activity</h3>
-            <p>Keep a simple record of medication activity over time.</p>
+        </ol>
+      </div>
+    </section>
+
+    <section class="home-section home-app" aria-labelledby="app-title">
+      <div class="container home-app__grid">
+        <header class="home-section__intro">
+          <p class="eyebrow">Your treatment</p>
+          <h2 id="app-title">Your progress in one place.</h2>
+          <p>
+            A clear overview of what to take, when to take it and how you’re doing —
+            all in a simple and friendly experience.
+          </p>
+          <ul class="example-pills" aria-label="Example progress highlights">
+            <li>
+              <span class="example-pills__label">Today</span>
+              <strong>4 of 4 complete</strong>
+            </li>
+            <li>
+              <span class="example-pills__label">Streak</span>
+              <strong>7 day streak</strong>
+            </li>
+            <li>
+              <span class="example-pills__label">Next dose</span>
+              <strong>18:00</strong>
+            </li>
+            <li>
+              <span class="example-pills__label">Milestone</span>
+              <strong>Badge unlocked</strong>
+            </li>
+          </ul>
+          <p class="example-note">Sample values for illustration only.</p>
+        </header>
+
+        <figure class="phone-slot">
+          <div class="phone-slot__screen">
+            <p>Approved app screenshot</p>
+            <p class="phone-slot__note">
+              A production Conny Cooper screenshot will sit here.
+              Older previews that still use historical naming are not shown.
+            </p>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="home-section home-progress" id="progress" aria-labelledby="progress-title">
+      <div class="container">
+        <header class="home-section__intro home-section__intro--center">
+          <p class="eyebrow">Progress &amp; achievements</p>
+          <h2 id="progress-title">Small steps deserve to be celebrated.</h2>
+          <p>
+            From your first dose to treatment completion, Conny Cooper
+            celebrates your progress with badges and milestones.
+          </p>
+        </header>
+
+        <ul class="badge-grid">
+          <li>
+            <figure>
+              <picture>
+                <source type="image/webp" srcset="/assets/badges/achievement_first_dose.webp">
+                <img
+                  src="/assets/badges/achievement_first_dose.png"
+                  width="414"
+                  height="523"
+                  alt="First Step badge: Dr. Cooper celebrating a first medicine."
+                  loading="lazy"
+                  decoding="async"
+                >
+              </picture>
+              <figcaption>First Step</figcaption>
+            </figure>
           </li>
-          <li class="feature-card">
-            <h3>Review treatment information</h3>
-            <p>Look back at the information and activity you have recorded.</p>
+          <li>
+            <figure>
+              <picture>
+                <source type="image/webp" srcset="/assets/badges/achievement_first_day.webp">
+                <img
+                  src="/assets/badges/achievement_first_day.png"
+                  width="381"
+                  height="434"
+                  alt="Day One Done badge: Dr. Cooper completing the first day."
+                  loading="lazy"
+                  decoding="async"
+                >
+              </picture>
+              <figcaption>Day One Done</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <picture>
+                <source type="image/webp" srcset="/assets/badges/achievement_streak_14.webp">
+                <img
+                  src="/assets/badges/achievement_streak_14.png"
+                  width="800"
+                  height="800"
+                  alt="14 Days badge: Dr. Cooper celebrating a two-week streak."
+                  loading="lazy"
+                  decoding="async"
+                >
+              </picture>
+              <figcaption>14 Days</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <picture>
+                <source type="image/webp" srcset="/assets/badges/achievement_first_treatment_complete.webp">
+                <img
+                  src="/assets/badges/achievement_first_treatment_complete.png"
+                  width="394"
+                  height="527"
+                  alt="Treatment Complete badge: Dr. Cooper celebrating a completed treatment."
+                  loading="lazy"
+                  decoding="async"
+                >
+              </picture>
+              <figcaption>Treatment Complete</figcaption>
+            </figure>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="human-title">
-      <div class="container split">
-        <div>
-          <span class="eyebrow">A more human experience</span>
-          <h2 id="human-title">Treatment organisation does not have to feel cold.</h2>
-        </div>
-        <div class="warm-panel">
-          <p>
-            Conny is being designed as a warm, approachable presence around
-            practical treatment tasks—clear enough to be useful, and friendly
-            enough to feel at home in everyday life.
-          </p>
-          <p>
-            Approved character artwork and product imagery will join Conny here
-            as the app gets closer to release.
-          </p>
-        </div>
+    <section class="home-section home-trust" aria-labelledby="trust-title">
+      <div class="container">
+        <header class="home-section__intro home-section__intro--center">
+          <p class="eyebrow">Trust &amp; safety</p>
+          <h2 id="trust-title">
+            Designed to support your routine — not replace your doctor.
+          </h2>
+        </header>
+
+        <ul class="trust-grid">
+          <li>
+            <h3>Helps you organise your treatment</h3>
+            <p>
+              Keep your medicines, reminders and progress in one place.
+            </p>
+          </li>
+          <li>
+            <h3>Private by design</h3>
+            <p>
+              The current release does not include advertising, cross-app
+              tracking or analytics SDKs. See the
+              <a href="/privacy/">Privacy Policy</a> for how information is handled.
+            </p>
+          </li>
+          <li>
+            <h3>Not medical advice</h3>
+            <p>
+              Conny Cooper does not replace your doctor, pharmacist or
+              professional medical advice.
+            </p>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="section section--surface" aria-labelledby="safety-title">
-      <div class="container split">
-        <div>
-          <span class="eyebrow">Trust and safety</span>
-          <h2 id="safety-title">Support for organising—not medical advice.</h2>
+    <section class="home-section home-final" aria-labelledby="final-title">
+      <div class="container home-final__grid">
+        <div class="home-final__art">
+          <picture>
+            <source type="image/webp" srcset="/assets/character/cooper_heart_positive.webp">
+            <img
+              src="/assets/character/cooper_heart_positive.png"
+              width="394"
+              height="382"
+              alt="Dr. Cooper holding a heart."
+              loading="lazy"
+              decoding="async"
+            >
+          </picture>
         </div>
-        <div class="notice notice--important">
-          <p>
-            Conny Cooper helps users organise treatment information. It does
-            not provide medical advice and does not replace a doctor,
-            pharmacist or other qualified healthcare professional.
-          </p>
-          <p>
-            For medical emergencies, contact your local emergency services.
-          </p>
+        <div>
+          <h2 id="final-title">Your next step starts here.</h2>
+          <p>Make treatment feel a little easier.</p>
+          <p class="cta cta--hero" role="status">Coming soon on the App Store</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer home-footer">
     <div class="container footer-content">
       <div class="footer-meta">
         <div class="footer-brand">Conny Cooper</div>
+        <p>A friendly companion for your treatment routine.</p>
         <p>© 2026 Conny Cooper</p>
       </div>
       <ul class="footer-links">
@@ -145,7 +346,6 @@
         <li><a href="/privacy/">Privacy</a></li>
         <li><a href="/terms/">Terms</a></li>
         <li><a href="/legal/">Legal Notice</a></li>
-        <li><a href="mailto:support@connycooper.com">support@connycooper.com</a></li>
       </ul>
     </div>
   </footer>
