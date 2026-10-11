@@ -8,10 +8,12 @@
   --product-card: #ffffff;
   --product-shadow: 0 10px 28px rgba(18, 48, 95, 0.08);
   --product-radius: 1.15rem;
-  --reveal-distance: 1.1rem;
-  --reveal-ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --reveal-text: 550ms;
-  --reveal-image: 650ms;
+  --reveal-distance: 2rem;
+  --reveal-ease-in: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --reveal-ease-out: cubic-bezier(0.4, 0, 0.68, 0.2);
+  --reveal-fade: 720ms;
+  --reveal-slide: 820ms;
+  --reveal-leave: 480ms;
   background: #ffffff;
   color: var(--product-navy);
 }
@@ -178,36 +180,56 @@ html {
   scroll-padding-top: 4.75rem;
 }
 
-.js [data-reveal].reveal-pending {
+.js [data-reveal] {
+  --reveal-x: 0px;
+  --reveal-y: var(--reveal-distance);
   opacity: 0;
-  transform: translateY(var(--reveal-distance));
+  transform: translate3d(var(--reveal-x), var(--reveal-y), 0);
   transition:
-    opacity var(--reveal-text) var(--reveal-ease),
-    transform var(--reveal-text) var(--reveal-ease);
+    opacity var(--reveal-fade) var(--reveal-ease-in),
+    transform var(--reveal-slide) var(--reveal-ease-in);
 }
 
-.js [data-reveal="left"].reveal-pending {
-  transform: translateX(calc(var(--reveal-distance) * -1));
+.js [data-reveal="fade"] {
+  --reveal-x: 0px;
+  --reveal-y: 0px;
 }
 
-.js [data-reveal="right"].reveal-pending {
-  transform: translateX(var(--reveal-distance));
+.js [data-reveal="left"] {
+  --reveal-x: calc(var(--reveal-distance) * -1);
+  --reveal-y: 0px;
 }
 
-.js [data-reveal="image"].reveal-pending {
-  transform: translateY(1.25rem) scale(0.98);
-  transition-duration: var(--reveal-image);
+.js [data-reveal="right"] {
+  --reveal-x: var(--reveal-distance);
+  --reveal-y: 0px;
+}
+
+.js [data-reveal="image"] {
+  --reveal-y: 2.25rem;
 }
 
 .js [data-reveal].is-in {
   opacity: 1;
-  transform: none;
+  transform: translate3d(0, 0, 0);
+}
+
+.js [data-reveal].is-out {
+  opacity: 0;
+  transform: translate3d(
+    calc(var(--reveal-x) * 0.4),
+    calc(var(--reveal-y) * 0.4),
+    0
+  );
+  transition-duration: var(--reveal-leave), var(--reveal-leave);
+  transition-timing-function: var(--reveal-ease-out), var(--reveal-ease-out);
 }
 
 @media (max-width: 47.99rem) {
-  .js [data-reveal="left"].reveal-pending,
-  .js [data-reveal="right"].reveal-pending {
-    transform: translateY(var(--reveal-distance));
+  .js [data-reveal="left"],
+  .js [data-reveal="right"] {
+    --reveal-x: 0px;
+    --reveal-y: var(--reveal-distance);
   }
 }
 
@@ -216,7 +238,8 @@ html {
     scroll-behavior: auto;
   }
 
-  .js [data-reveal].reveal-pending,
+  .js [data-reveal],
+  .js [data-reveal].is-out,
   .js [data-reveal].is-in {
     opacity: 1;
     transform: none;
@@ -298,7 +321,7 @@ html {
   border-radius: var(--product-radius);
   background: var(--product-card);
   box-shadow: var(--product-shadow);
-  transition: transform 180ms var(--reveal-ease);
+  transition: transform 180ms var(--reveal-ease-in);
 }
 
 .support-topic:hover {

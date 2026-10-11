@@ -137,6 +137,22 @@
   height: auto;
 }
 
+@keyframes cooper-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.4rem);
+  }
+}
+
+@media (min-width: 48rem) {
+  .js .home-hero__art.is-in img {
+    animation: cooper-float 5.8s ease-in-out 0.8s infinite;
+  }
+}
+
 .home-final__art img {
   width: min(100%, 22.5rem);
   height: auto;
@@ -508,7 +524,9 @@
   }
 
   .cta:hover,
-  .badge-grid figure:hover img {
+  .badge-grid figure:hover img,
+  .js .home-hero__art.is-in img {
     transform: none;
+    animation: none;
   }
 }
