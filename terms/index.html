@@ -30,28 +30,44 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/branding/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/product.css">
 </head>
 
-<body>
+<body class="product">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="container">
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a class="brand" href="/">Conny Cooper</a>
-        <ul class="nav-links">
+  <header class="product-header">
+    <div class="container product-header__bar">
+      <a class="brand" href="/">Conny Cooper</a>
+
+      <nav class="product-nav product-nav--desktop" aria-label="Primary navigation">
+        <ul class="product-nav__links">
           <li><a href="/#how-it-works">How it works</a></li>
           <li><a href="/#progress">Progress</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/support/">Support</a></li>
         </ul>
       </nav>
+
+      <details class="product-menu">
+        <summary aria-label="Open menu">Menu</summary>
+        <nav aria-label="Primary navigation">
+          <ul class="product-nav__links">
+            <li><a href="/#how-it-works">How it works</a></li>
+            <li><a href="/#progress">Progress</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/support/">Support</a></li>
+          </ul>
+        </nav>
+      </details>
+
+      <a class="cta cta--header" href="mailto:support@connycooper.com">Email support</a>
     </div>
   </header>
 
   <main id="main-content" tabindex="-1">
     <header class="page-hero">
-      <div class="container">
+      <div class="container page-hero-copy">
         <span class="eyebrow">Using Conny Cooper</span>
         <h1>Terms of Use</h1>
         <p>
@@ -67,13 +83,22 @@
         <nav class="document-nav" aria-label="Terms of Use sections">
           <strong>On this page</strong>
           <ul>
-            <li><a href="#operator">Operator</a></li>
-            <li><a href="#acceptance">Acceptance and age</a></li>
-            <li><a href="#medical">Medical limitations</a></li>
-            <li><a href="#super">Conny Cooper Super</a></li>
-            <li><a href="#acceptable-use">Acceptable use</a></li>
-            <li><a href="#deletion">Account deletion</a></li>
-            <li><a href="#law">Applicable law</a></li>
+            <li><a href="#operator">1. Operator</a></li>
+            <li><a href="#acceptance">2. Acceptance and age</a></li>
+            <li><a href="#accounts">3. Accounts</a></li>
+            <li><a href="#permitted-use">4. Permitted use</a></li>
+            <li><a href="#information">5. Medication information and OCR</a></li>
+            <li><a href="#medical">6. Not medical advice</a></li>
+            <li><a href="#emergency">7. Not an emergency service</a></li>
+            <li><a href="#super">8. Conny Cooper Super</a></li>
+            <li><a href="#intellectual-property">9. Intellectual property</a></li>
+            <li><a href="#acceptable-use">10. Acceptable use</a></li>
+            <li><a href="#availability">11. Availability and changes</a></li>
+            <li><a href="#deletion">12. Account deletion</a></li>
+            <li><a href="#liability">13. Responsibility and liability</a></li>
+            <li><a href="#changes">14. Changes to these terms</a></li>
+            <li><a href="#law">15. Applicable law</a></li>
+            <li><a href="#contact">16. Contact</a></li>
           </ul>
         </nav>
 
@@ -328,10 +353,11 @@
     </div>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer product-footer">
     <div class="container footer-content">
       <div class="footer-meta">
         <div class="footer-brand">Conny Cooper</div>
+        <p>A friendly companion for your treatment routine.</p>
         <p>© 2026 Conny Cooper</p>
       </div>
       <ul class="footer-links">

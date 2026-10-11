@@ -30,28 +30,44 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/branding/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/product.css">
 </head>
 
-<body>
+<body class="product">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="container">
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a class="brand" href="/">Conny Cooper</a>
-        <ul class="nav-links">
+  <header class="product-header">
+    <div class="container product-header__bar">
+      <a class="brand" href="/">Conny Cooper</a>
+
+      <nav class="product-nav product-nav--desktop" aria-label="Primary navigation">
+        <ul class="product-nav__links">
           <li><a href="/#how-it-works">How it works</a></li>
           <li><a href="/#progress">Progress</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/support/">Support</a></li>
         </ul>
       </nav>
+
+      <details class="product-menu">
+        <summary aria-label="Open menu">Menu</summary>
+        <nav aria-label="Primary navigation">
+          <ul class="product-nav__links">
+            <li><a href="/#how-it-works">How it works</a></li>
+            <li><a href="/#progress">Progress</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/support/">Support</a></li>
+          </ul>
+        </nav>
+      </details>
+
+      <a class="cta cta--header" href="mailto:support@connycooper.com">Email support</a>
     </div>
   </header>
 
   <main id="main-content" tabindex="-1">
     <header class="page-hero">
-      <div class="container">
+      <div class="container page-hero-copy">
         <span class="eyebrow">Your information</span>
         <h1>Privacy Policy</h1>
         <p>
@@ -67,13 +83,26 @@
         <nav class="document-nav" aria-label="Privacy Policy sections">
           <strong>On this page</strong>
           <ul>
-            <li><a href="#controller">Who we are</a></li>
-            <li><a href="#information">Information we process</a></li>
-            <li><a href="#use">How we use it</a></li>
-            <li><a href="#providers">Service providers</a></li>
-            <li><a href="#retention">Retention and deletion</a></li>
-            <li><a href="#rights">Your rights</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#controller">1. Who we are</a></li>
+            <li><a href="#scope">2. Scope</a></li>
+            <li><a href="#information">3. Information we process</a></li>
+            <li><a href="#ocr">4. Prescription scanning</a></li>
+            <li><a href="#use">5. How we use it</a></li>
+            <li><a href="#bases">6. Legal bases</a></li>
+            <li><a href="#storage">7. Where information is stored</a></li>
+            <li><a href="#providers">8. Service providers</a></li>
+            <li><a href="#location">9. Location and pharmacy search</a></li>
+            <li><a href="#purchases">10. Purchases</a></li>
+            <li><a href="#notifications">11. Notifications and alarms</a></li>
+            <li><a href="#transfers">12. International transfers</a></li>
+            <li><a href="#retention">13. Retention</a></li>
+            <li><a href="#security">14. Security</a></li>
+            <li><a href="#deletion">15. Account deletion</a></li>
+            <li><a href="#rights">16. Your privacy rights</a></li>
+            <li><a href="#age">17. Age policy</a></li>
+            <li><a href="#tracking">18. No advertising or tracking</a></li>
+            <li><a href="#changes">19. Changes to this policy</a></li>
+            <li><a href="#contact">20. Contact</a></li>
           </ul>
         </nav>
 
@@ -417,10 +446,11 @@
     </div>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer product-footer">
     <div class="container footer-content">
       <div class="footer-meta">
         <div class="footer-brand">Conny Cooper</div>
+        <p>A friendly companion for your treatment routine.</p>
         <p>© 2026 Conny Cooper</p>
       </div>
       <ul class="footer-links">
